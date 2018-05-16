@@ -4,7 +4,7 @@
 
 ### Instruções
 
-- Instalar node na no linux se não tiver. Versão 6.11.3 ou superior. Indicado usar [nvm](https://github.com/creationix/nvm#install-script).
+- Instalar node no linux se não tiver. Versão 6.11.3 ou superior. Indicado usar [nvm](https://github.com/creationix/nvm#install-script).
 
 - Na pasta raiz executar em um terminal o servidor com `node server.js`;
   - As portas são definidas automaticamente entre a 3000 e 3010.
