@@ -1,0 +1,25 @@
+{
+  "name": "udesc",
+  "version": "1.0.0",
+  "description": "## Rhoger Anacleto",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udescEita/tcp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udescEita/tcp/issues"
+  },
+  "homepage": "https://github.com/udescEita/tcp#readme",
+  "dependencies": {
+    "moment": "^2.22.2",
+    "mongodb": "^3.0.10",
+    "uuid": "^3.2.1"
+  }
+}

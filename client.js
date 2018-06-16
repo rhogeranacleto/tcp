@@ -1,10 +1,13 @@
 const net = require('net');
+const {
+	v4
+} = require('uuid');
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
 
 let port = 2999;
-let lastConnectedPort = 0;
+const session_id = v4();
 
 let client = new net.Socket();
 
@@ -22,7 +25,15 @@ function clientConnect() {
 
 client.on('data', function (data) {
 
-	console.log('Texto recebido do servidor: ' + data);
+	data = data.toString();
+
+	if (data[0] === '>') {
+
+		console.log(data);
+	} else {
+
+		console.log('Texto recebido do servidor: ' + data);
+	}
 });
 
 client.on('close', function (j) {
@@ -40,7 +51,10 @@ client.on('error', function (err) {
 
 process.stdin.on('data', function (text) {
 
-	client.write(text);
+	client.write(JSON.stringify({
+		session_id,
+		text
+	}));
 });
 
 clientConnect();
